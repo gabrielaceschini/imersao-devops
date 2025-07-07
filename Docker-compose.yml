@@ -1,0 +1,9 @@
+services:
+  app:
+    build: . # Constroi a imagem a partir do Dockerfile na raiz do projeto
+    container_name: api # Nome do container (caso não haja, será aleatório)
+    ports:
+      - "8000:8000" # Mapeia a porta 8000 do host para a 8000 do container
+    volumes:
+      - .:/app # Monta o diretório app dentro do container
+# Comando: docker compose up
